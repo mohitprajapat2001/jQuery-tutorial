@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Introduction</title>
+</head>
+<body>
+    <h1>This is First jQuery Video Introdution</h1>
+    <button id="mybtn">Click ME For AlErt!!</button>
+    <button id="mybtn2">Click ME For AlErt!!</button>
+</body>
+
+<script src="/jquery/jquery.js"></script>
+<script>
+    let btn = document.getElementById("mybtn")
+    btn.onclick = function(){
+        alert("This is Done With JS")
+    }
+
+    $("#mybtn2").click(()=>{
+        alert("This is Done With Jquery")
+    })
+</script>
+</html>
