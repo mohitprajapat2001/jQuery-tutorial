@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Syntax</title>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>jQuery Syntax</h1>
+    <ul id="mylist">
+        <li>Hello</li>
+        <li>World</li>
+        <li class="tutorial">jQuery Tutorial</li>
+        <li>Like</li>
+        <li>Subscribe</li>
+    </ul>
+</body>
+<script>
+    //$("Selector").method(function()) Basic jQuery Syntax
+    console.log($('h1').html())
+    console.log($('ul').html())
+    $("#mylist .tutorial").click(function(){
+        console.log("You Clicked")
+    })
+</script>
+</html>
