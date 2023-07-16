@@ -21,19 +21,27 @@
         button.btn {
             padding: 10px
         }
+        #textarea {
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+        }
     </style>
 </head>
 <script src="/jquery/jquery.js"></script>
 <body>
     <h1>Hello This is Mouse Events Using jQuery</h1>
     <div id="box">
-        <button class="btn">Click Me !!</button>
+        <button class="btn">Click Me !! <span id="myscroll"></span></button>
     </div>
+    <div id="textarea">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, quia optio accusantium nihil necessitatibus nisi veniam dicta ab nesciunt repellat eveniet quo et, ratione vitae, est laudantium. Adipisci, dolores cumque?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ab illo nobis, atque molestias dolores. Numquam quia ut obcaecati totam, neque illum adipisci voluptas quas natus velit nisi rem id!</div>
 </body>
 <script>
+    let i = 0;
+
     $(document).ready(()=>{
         //Click Event
-        $(".btn").click(()=>{
+        /*$(".btn").click(()=>{
             $("#box").css("background-color","red")
             //$("#box").css("color","white")
             //let a = $("#box").html();
@@ -59,7 +67,23 @@
         //Mouse Enter Click Event
         //$(".btn").mouseover(()=>{
         //    $("#box").css("background-color","purple")
-        //})
+        //})*/
+        //Mouse Up, Mouse Down, Mouse Hover****, Mouse Scroll***
+        $(".btn").mouseup(()=>{
+            $("#box").css("background-color","cyan")
+        })
+        $(".btn").mousedown(()=>{
+            $("#box").css("background-color","chocolate")
+        })
+        $(".btn").mouseover(()=>{
+            $("#box").css("background-color","pink")
+        })
+        $(".btn").mousemove(()=>{
+            $("#box").css("background-color","orange")
+        })
+        $("#textarea").scroll(()=>{
+            $("#myscroll").text(i += 1)
+        })
     })
 </script>
 </html>
