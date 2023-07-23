@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Keyboard Events</title>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>This is jQuery Keyboard Event Video</h1>
+</body>
+<script>
+    $(document).ready(()=>{
+        //$("body").keypress(()=>{
+         //   $("body").css("background", "red")
+        //})
+        $("body").keyup(()=>{
+            $("body").css("background", "pink")
+        })
+        $("body").keydown(()=>{
+            $("body").css("background", "gray")
+        })
+    })
+</script>
+</html>
