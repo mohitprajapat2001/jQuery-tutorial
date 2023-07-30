@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON & OFF Methods</title>
+    <style>
+        div#box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid red;
+            padding: 25px;
+        }
+
+        .red {
+            background-color: red;
+            color: aliceblue;
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+
+<body>
+    <h1>This is ON & OFF Methods Tutorial</h1>
+    <div id="box">
+        <p class="mypara">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam odit quos tenetur ratione corrupti sit facilis
+            possimus. Expedita, excepturi? Consectetur exercitationem eaque fugit. Asperiores non molestias
+            necessitatibus, magni quidem temporibus?
+        </p>
+    </div>
+    <button id="mybtn">Click Button</button>
+</body>
+<script>
+    $(document).ready(function () {
+        //$("#box").mouseenter(function(){
+        //    $(this).css("background-color", "red")
+        //})
+        //$("#box").mouseleave(function(){
+        //    $(this).css("background-color", "")
+        // })
+
+
+        //On & Off Methods
+        $("#box").on({
+            click: function () {
+                $(this).css("background-color", "red")
+            },
+            mouseenter: function () {
+                $(this).css("background-color", "orange")
+            },
+            mouseleave: function () {
+                $(this).css("background-color", "green")
+            }
+        })
+
+        //OFF Method
+        $("#mybtn").click(function () {
+            $("#box").off("click mouseenter")
+        })
+    })
+</script>
+
+</html>
