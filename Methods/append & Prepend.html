@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append & Prepend Tutorial</title>
+    <style>
+        div#box {
+            background-color: burlywood;
+            border: 1px solid;
+            padding: 10px;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>This Tutorial is About Append And Prepend Method</h1>
+    <!-- <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa possimus ducimus maxime ut officia ullam atque nisi itaque, at inventore eaque? Numquam cupiditate tenetur eveniet recusandae ratione soluta odit, quis necessitatibus obcaecati eos commodi quod est quibusdam voluptatem voluptatum, aliquam deleniti sunt facilis! Minima iure dolor quam! Voluptatum sit architecto asperiores voluptas earum quibusdam blanditiis, ipsam fugiat! Culpa repellat dicta sunt quas, laboriosam ad ratione vel sint ipsum perferendis iusto error dolores magnam nemo alias beatae necessitatibus aspernatur soluta provident. Maxime voluptate eum placeat voluptatum? Quam, ad, error iusto ex ullam saepe voluptas consequatur perspiciatis accusamus earum iste corrupti blanditiis!</p>
+    </div> -->
+    <ol id="mylist">
+        <li>Hello</li>
+        <li>World</li>
+        <li>Youtube</li>
+        <li>Mohit</li>
+        
+    </ol>
+    <button class="btn1">Append</button>
+    <button class="btn2">Prepend</button>
+</body>
+<script>
+    $(document).ready(function(){
+        //Append 
+        $(".btn1").click(function(){
+            $("div#box").append("<h2>Hello Mohit</h2>")
+            $("div#box").append("<h2>Like Karlo</h2>")
+        })
+        //Prepend 
+        $(".btn2").click(function(){
+            $("div#box").prepend("<h2>Like Karo Subscribe Karo</h2>")
+        })
+
+        //Append Prepend Working With List
+        //Append 
+        $(".btn1").click(function(){
+            $("#mylist").append("<li>Append List Item</li>")
+            
+        })
+        //Prepend 
+        $(".btn2").click(function(){
+            $("#mylist").prepend("<li>Prepend List Item</li>")
+        })
+    })
+</script>
+</html>
