@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After & Before Tutorial</title>
+    <style>
+        div#box {
+            background-color: burlywood;
+            border: 1px solid;
+            padding: 10px;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>This Tutorial is About After & Before Method</h1>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa possimus ducimus maxime ut officia ullam atque nisi itaque, at inventore eaque? Numquam cupiditate tenetur eveniet recusandae ratione soluta odit, quis necessitatibus obcaecati eos commodi quod est quibusdam voluptatem voluptatum, aliquam deleniti sunt facilis! Minima iure dolor quam! Voluptatum sit architecto asperiores voluptas earum quibusdam blanditiis, ipsam fugiat! Culpa repellat dicta sunt quas, laboriosam ad ratione vel sint ipsum perferendis iusto error dolores magnam nemo alias beatae necessitatibus aspernatur soluta provident. Maxime voluptate eum placeat voluptatum? Quam, ad, error iusto ex ullam saepe voluptas consequatur perspiciatis accusamus earum iste corrupti blanditiis!</p>
+    </div>
+    
+    <button class="btn1">Append</button>
+    <button class="btn2">Prepend</button>
+    <button class="btn3">After</button>
+    <button class="btn4">Before</button>
+</body>
+<script>
+    $(document).ready(function(){
+        //Append 
+        $(".btn1").click(function(){
+            $("div#box").append("<h2>Hello Mohit</h2>")
+        })
+        //Prepend 
+        $(".btn2").click(function(){
+            $("div#box").prepend("<h2>Like Karo Subscribe Karo</h2>")
+        })
+        //After & Before Method
+        //After Method
+        $(".btn3").click(function(){
+            $("div#box").after("<h2>Hello Mohit</h2>")
+        })
+        //Before Method 
+        $(".btn4").click(function(){
+            $("div#box").before("<h2>Like Karo Subscribe Karo</h2>")
+        })
+    })
+</script>
+</html>
