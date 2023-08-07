@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace With Replace All Method</title>
+    <style>
+        #box {
+            background-color: burlywood;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <div id="box">
+        <h1>Hello Mohit</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,</p>
+    </div>
+    <button class="replacebtn">Replace</button>
+</body>
+<script>
+    $(document).ready(()=>{
+        console.log("ReplaceWith & ReplaceAll Method")
+       // $(".replacebtn").click(function(){
+        //    $("#box p:nth-child(4)").replaceWith("<h3>Like Subscribe</h3>")
+        //})
+
+        //Replace ALL Method
+        $(".replacebtn").click(function(){
+            $("<h2>Share Kardo Guys</h2>").replaceAll("#box p")
+        })
+    })
+</script>
+</html>

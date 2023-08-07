@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty & Remove Tutorial</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        div#box {
+            background-color: burlywood;
+            border: 1px solid;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+
+<body>
+    <h1>Empty & Remove Tutorial</h1>
+    <div id="box">
+        <h1>Hello Mohit</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa possimus ducimus maxime ut officia ullam atque
+            nisi itaque, at inventore eaque? Numquam cupiditate tenetur eveniet recusandae ratione soluta odit, quis
+            necessitatibus obcaecati eos commodi quod est quibusdam voluptatem voluptatum, aliquam deleniti sunt
+            facilis! Minima iure dolor quam! Voluptatum sit architecto asperiores voluptas earum quibusdam blanditiis,
+            ipsam fugiat! Culpa repellat dicta sunt quas, laboriosam ad ratione vel sint ipsum perferendis iusto error
+            dolores magnam nemo alias beatae necessitatibus aspernatur soluta provident. Maxime voluptate eum placeat
+            voluptatum? Quam, ad, error iusto ex ullam saepe voluptas consequatur perspiciatis accusamus earum iste
+            corrupti blanditiis!</p>
+    </div>
+    <button class="btn1">Empty</button>
+    <button class="btn2">Remove</button>
+</body>
+<script>
+    $(document).ready(function () {
+        //Empty & Remove
+        $(".btn1").click(function () {
+            $("#box").empty()
+        })
+
+        //Remove Method
+        $(".btn2").click(function () {
+            $("#box").remove()
+        })
+    })
+</script>
+
+</html>

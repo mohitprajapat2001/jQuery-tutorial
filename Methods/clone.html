@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Method jQuery</title>
+    <style>
+        * {
+            margin: 10px;
+            padding: 10px;
+        }
+        body{
+            text-align: center;
+        }
+        div#box1 {
+            background-color: aqua;
+            border: 1px solid;
+        }
+        div#box2 {
+            background-color: coral;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>jQuery Clone Method Tutorial</h1>
+    <div id="box1">
+        <h3>Hello Mohit</h3>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta porro nemo aut, distinctio officiis debitis molestiae dolores facilis dolor quasi.</p>
+    </div>
+    <button class="btn">Clone Method</button>
+    <div id="box2">
+        <h4>Clone Div</h4>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $(".btn").click(()=>{
+            $("#box2").prepend($("#box1 p").clone())
+        })
+
+    })
+</script>
+</html>
