@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap & Unwrap Method</title>
+    <style>
+        #box {
+            background-color: aqua;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            border: 1px solid;
+        }
+        #red {
+            color: red;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>Hello Guys Welcome to Our Youtube Channel</h1>
+    <div id="box">
+        <h1>Hello Like Karo Subscribe Karo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur totam doloremque dolorum harum aut blanditiis voluptas nisi voluptatum officia nemo?</p>
+    </div>
+    <button id="wrap">Wrap Button</button>
+    <button id="unwrap">Unwrap Button</button>
+
+</body>
+<script>
+    $(document).ready(()=>{
+        console.log("WRAP & UNWRAP METHOD");
+        $("#wrap").click(function(){
+            $("#box p").wrap("<h3 id='red'></h3>")
+        })
+
+        $("#unwrap").click(function(){
+            $("#box p").unwrap()
+        })
+    })
+</script>
+</html>
