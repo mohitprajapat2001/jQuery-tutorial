@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WrapAll WrapInner Tutorial</title>
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>WrapAll WrapInner Tutorial in Hindi Mohit Prajapat</h1>
+    <div id="box">
+        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eaque.</p>
+        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eaque.</p>
+        <p class="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eaque.</p>
+
+        <span>
+            hello World
+        </span><br>
+        <span>
+            Mohit Prajapat ko Subscribe karo
+        </span>
+    </div>
+    <br>
+    <button id="wrapbtn">Wrap Method</button>
+    <button id="wrapbtn2">WrapInner Method</button>
+</body>
+<script>
+    $(document).ready(function(){
+        //WrapAll & WrapInner Method jQuery
+        $("#wrapbtn").click(function(){
+            $("#box p").wrapAll("<h1 class='pink'></h1>")
+        })
+
+
+        //WrapInner Method
+        $("#wrapbtn2").click(function(){
+            $("#box span").wrapInner("<b></b>")
+        })
+    })
+</script>
+</html>
