@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height & Width Method jQuery</title>
+    <style>
+        div#box {
+            width: 500px;
+            height: 250px;
+            background-color: aqua;
+            padding: 10px;
+            margin: 10px;
+            border: 10px solid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <h1>Height & Width Tutorial - Mohit Prajapat</h1>
+    <div id="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sed eum at, dolores laboriosam reiciendis minus corrupti error, ipsam qui illum! Esse totam illo labore repudiandae explicabo expedita veritatis doloremque.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque officia amet mollitia voluptatem impedit delectus ipsam quia voluptas facere dolor ut voluptatum, qui quo dicta odit architecto! Numquam, expedita molestiae!
+    </div>
+    <button class="heightbtn">Height</button>
+    <button class="widthbtn">Width</button>
+</body>
+<script>
+    $(document).ready(function(){
+        console.log("Height & Width Method")
+        //Height & Width Method
+
+        //All Height
+        $(".heightbtn").click(function(){
+            console.log("Height "+$("#box").height())
+            console.log("Inner Height"+$("#box").innerHeight())
+            console.log("Outer Height"+$("#box").outerHeight())
+            console.log("Outer Height Truue"+$("#box").outerHeight(true))
+        })
+
+        //All Widrth
+        $(".widthbtn").click(function(){
+            console.log("width "+$("#box").width())
+            console.log("Inner width"+$("#box").innerWidth())
+            console.log("Outer width"+$("#box").outerWidth())
+            console.log("Outer width Truue"+$("#box").outerWidth(true))
+        })
+    })
+</script>
+</html>
