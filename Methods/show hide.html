@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Tutorial</title>
+    <Style>
+        #box {
+            background-color: tomato;
+            width: 250px;
+            height: 250px;
+            border: 1px solid;
+            border-radius: 50%;
+            margin: 10px;
+        }
+    </Style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+ <div id="box"></div>  
+ <button id="show">Show</button> 
+ <button id="hide">Hide</button> 
+ <button id="toggle">Toggle</button> 
+</body>
+<script>
+    $(document).ready(function(){
+        console.log("Show Hide Tutorial")
+
+        //Hide - Element HTML Hide 
+        $("#hide").click(function(){
+            $("#box").hide(1000, function(){
+                alert("This Element is Hide Succesfully")
+            })
+        })
+
+        //Show - Element HTML Show 
+        $("#show").click(function(){
+            $("#box").show(3000, function(){
+                alert("This Element is Show Succesfully")
+            })
+            
+        })
+
+        //Toggle - Element HTML Reverse Hide SHow 
+        $("#toggle").click(function(){
+            $("#box").toggle(2000)
+            })
+            
+        })
+</script>
+</html>
