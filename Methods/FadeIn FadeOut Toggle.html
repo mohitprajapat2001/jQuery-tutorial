@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FadeIn FadeOut Toggle</title>
+    <Style>
+        #box {
+            background-color: blue;
+            width: 250px;
+            height: 250px;
+            border: 1px solid;
+            border-radius: 50%;
+            margin: 10px;
+        }
+    </Style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+ <button id="fadein">FadeIn</button> 
+ <button id="fadeout">FadeOut</button> 
+ <button id="toggle">Toggle</button> 
+ <button id="fadeto">Fadeto</button> 
+ <button id="hide">Hide</button> 
+ <div id="box"></div>  
+</body>
+<script>
+    $(document).ready(function(){
+        console.log("Show Hide Tutorial")
+
+        //FadeOut
+        $("#fadeout").click(function(){
+            $("#box").fadeOut(1000);
+        })
+
+        $("#hide").click(function(){
+            $("#box").hide("slow");
+        })
+           
+        //FadeIn
+        $("#fadein").click(function(){
+            $("#box").fadeIn(2000)
+        })
+
+        //Fadetoggle
+        $("#toggle").click(function(){
+            $("#box").fadeToggle(1000)
+        })
+
+        //fadeto
+        $("#fadeto").click(function(){
+            $("#box").fadeTo(1000, 1, function(){
+                alert("Hello Subscribe My Channel")
+            })
+        })
+
+        })
+</script>
+</html>
