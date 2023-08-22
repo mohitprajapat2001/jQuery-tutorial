@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Methods Tutorial</title>
+    <style>
+        #box {
+            height: 250px;
+            width: 250px;
+            border-radius: 25%;
+            background-color: yellow;
+            margin: 10px;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+
+<body>
+    <button id="slideup">Slide Up</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="slidetoggle">Slide Toggle</button>
+    <div id="box"></div>
+</body>
+<script>
+    $(document).ready(function () {
+        //Slide Methods Tutorial
+        $("#slideup").click(function () {
+            //$("#box").slideUp(2000,function(){
+            //     alert("this  is Slide Up")
+            $("#box").slideUp(2000);
+        });
+
+        //SlideDown 
+        $("#slidedown").click(function () {
+            $("#box").slideDown(1000, function () {
+                console.log("THis is Slide Down")
+            });
+        });
+        $("#slidetoggle").click(function () {
+            $("#box").slideToggle(1000)
+        });
+    })
+</script>
+
+</html>

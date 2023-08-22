@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Tutorial</title>
+    <style>
+        #box {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background-color: aqua;
+            margin: 10px;
+        }
+        #box h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            color: indigo;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <button id="animate">Animate</button>
+    <div id="box">
+        <h3>Subscribe</h3>
+    </div>
+</body>
+<script>
+    $(document).ready(()=>{
+        console.log("Animate jQuery Tutorial")
+        $("#animate").click(function(){
+            //Background color And Text Color ! Change
+            $("#box").animate({
+                'height': '500px',
+                'width' : '500px',
+            }, 5000, function(){
+                $("#box").animate({
+                    'height': '250px',
+                    'width' : '250px',},2000)
+            })
+        })
+
+    })
+</script>
+</html>
