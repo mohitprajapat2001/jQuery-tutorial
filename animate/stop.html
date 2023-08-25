@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Tutorial</title>
+    <style>
+        #box {
+            position: relative;
+            background-color: bisque;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+
+<body>
+    <button id="animate">Animate</button>
+    <button id="stop">Stop</button>
+    <div id="box"></div>
+</body>
+<script>
+    $(document).ready(() => {
+        $("#animate").click(function () {
+            $("#box").animate({
+                left: "450px"
+            }, 3000)
+            $("#box").animate({
+                top: "500px"
+            }, 3000)
+        })
+
+        //Stop Method jQuery
+        $("#stop").click(function () {
+            $("#box").stop()
+        })
+    })
+</script>
+
+</html>
