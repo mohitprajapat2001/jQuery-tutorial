@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaining Method Tutorial</title>
+    <style>
+        #box {
+            height: 250px;
+            width: 250px;
+            background-color: coral;
+            margin: 10px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+
+<body>
+    <button id="chain">Chain Method</button>
+    <div id="box">Subsrcibe</div>
+</body>
+<script>
+    $(document).ready(() => {
+        //Chaining Method Tutorial
+       // $("#chain").click(function () {
+            //    $("#box").css('background-color','pink')
+            //  $("#box").hide(2000);
+            //$("#box").show(2000);
+       // })
+
+
+        $("#chain").click(function () {
+            $("#box").css('background-color','yellow').hide(2000).show(2000).slideUp(3000).slideDown(4000).css('color','chocolate');
+
+        })
+    })
+</script>
+
+</html>
