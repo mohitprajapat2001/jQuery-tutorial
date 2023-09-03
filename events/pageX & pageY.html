@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pageX pageY Event Tutorial</title>
+    <style>
+        #result {
+            height: 250px;
+            width: 250px;
+            border-radius: 10%;
+            padding: 10px;
+            text-align: center;
+            background-color: aqua;
+        }
+        #circle {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: #ddd;
+            mix-blend-mode: difference;
+            z-index: 1;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+    <div id="result"></div>
+    <div id="circle"></div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("body").mousemove(function(event){
+           // console.log("pageX "+event.pageX)
+          //  console.log("pageY "+event.pageY)
+          $("#result").text("pageX "+event.pageX+" pageY "+event.pageY)
+
+          let x = event.pageX-"20"
+          let y = event.pageY-"20"
+
+          $("#circle").offset({
+            "left":x,"top":y
+          })
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event type Tutorial</title>
+    <style>
+        #box {
+            background-color: bisque;
+            height: 250px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<script src="/jquery/jquery.js"></script>
+<body>
+<h1>Event Type Tutorial Mohit Prajapat</h1>
+<div id="box"></div>
+<p id="temp"></p>
+</body>
+<script>
+    $(document).ready(function() {
+        //event.type used to find which event trigger
+        $("#box").on("mouseleave mouseenter click dblclick",function(event){
+            $("#temp").text("Event "+event.type)
+        })
+    })
+</script>
+</html>
